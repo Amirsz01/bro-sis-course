@@ -90,7 +90,8 @@ function App() {
                 {
                 message && <>
                     <span>
-                        {!message.Id ? "BRO! <br>" : "SIS! <br>"}
+                        {!message.Id ? "BRO!  " : "SIS!  "}
+                        
                         <span>
                             {message.name} at {message.time}
                         </span>
