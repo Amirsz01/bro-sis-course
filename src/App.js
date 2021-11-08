@@ -13,7 +13,7 @@ function App() {
     const [message, setMessage] = useState({});
 
     const UpdateCounters = (countId)=>{
-        countId ? setBro((count)=>++count) : setSis((count)=>++count);
+        !countId ? setBro((count)=>++count) : setSis((count)=>++count);
         setMessage({
             Id: countId,
             ...session,
