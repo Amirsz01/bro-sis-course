@@ -10,7 +10,7 @@ function App() {
     const [session, setSession] = useState();
     const [countBro, setBro] = useState(0);
     const [countSis, setSis] = useState(0);
-    const [message, setMessage] = useState({});
+    const [message, setMessage] = useState();
 
     const UpdateCounters = (countId)=>{
         !countId ? setBro((count)=>++count) : setSis((count)=>++count);
@@ -90,7 +90,7 @@ function App() {
                 {
                 message && <>
                     <span>
-                        {!message.Id ? "BRO!" : "SIS!"}
+                        {!message.Id ? "BRO! <br>" : "SIS! <br>"}
                         <span>
                             {message.name} at {message.time}
                         </span>
