@@ -87,12 +87,16 @@ function App() {
         }
         {
             session && <>
-                <span>
-                    {!message.Id ? "BRO!" : "SIS!"}
+                {
+                message && <>
                     <span>
-                        {message.name} at {message.time}
-                    </span>
-                </span >
+                        {!message.Id ? "BRO!" : "SIS!"}
+                        <span>
+                            {message.name} at {message.time}
+                        </span>
+                    </span >
+                </>
+                }
                 <Col className="align-items-md-center justify-content-md-center">
                     <span style={styleContainer}>
                         <Button onClick={()=>{UpdateCounters(0)}}>Bro!</Button>
